@@ -1,17 +1,22 @@
-# DataConm
+DataConm
 
-## Distribución oficial
+Data Connection Management
+
+Administración de Conexiones de Datos Empresariales
+
+Distribución oficial
 
 Este repositorio contiene exclusivamente los paquetes oficiales de instalación y actualización de DataConm.
 
 El código fuente, los archivos internos de desarrollo, las credenciales, las claves empresariales, las bases de datos operativas, los registros técnicos y los respaldos privados no forman parte de este repositorio.
 
-## Descripción
+Descripción
 
-DataConm es un sistema de integración desarrollado por COMPULABT S.A. para obtener información desde un ERP, transformarla a una estructura controlada y utilizarla en la administración de productos, precios y existencias de una tienda WooCommerce.
+DataConm es un middleware de integración y administración de conexiones de datos empresariales, desarrollado por COMPULABT S.A.
 
-El sistema incorpora validaciones, simulaciones y controles destinados a reducir errores antes de publicar información en la tienda.
+El sistema obtiene información desde un ERP, la transforma a una estructura controlada y permite utilizarla en la administración de productos, precios y existencias de una tienda WooCommerce.
 
+DataConm incorpora validaciones, simulaciones y controles destinados a reducir errores antes de publicar información en la tienda.
 ## Versión disponible
 
 Versión: 1.26.10
