@@ -1,16 +1,16 @@
-DataConm
+# DataConm
 
 Data Connection Management
 
 Administración de Conexiones de Datos Empresariales
 
-Distribución oficial
+## Distribución oficial
 
 Este repositorio contiene exclusivamente los paquetes oficiales de instalación y actualización de DataConm.
 
 El código fuente, los archivos internos de desarrollo, las credenciales, las claves empresariales, las bases de datos operativas, los registros técnicos y los respaldos privados no forman parte de este repositorio.
 
-Descripción
+## Descripción
 
 DataConm es un middleware de integración y administración de conexiones de datos empresariales, desarrollado por COMPULABT S.A.
 
