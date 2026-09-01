@@ -1,9 +1,5 @@
 # DataConm
 
-Data Connection Management
-
-Administración de Conexiones de Datos Empresariales
-
 ## Distribución oficial
 
 Este repositorio contiene exclusivamente los paquetes oficiales de instalación y actualización de DataConm.
@@ -12,222 +8,185 @@ El código fuente, los archivos internos de desarrollo, las credenciales, las cl
 
 ## Descripción
 
-DataConm es un middleware de integración y administración de conexiones de datos empresariales, desarrollado por COMPULABT S.A.
+DataConm es un sistema de Administración de Conexión de Datos Empresariales desarrollado por COMPULABT S.A.
 
-El sistema obtiene información desde un ERP, la transforma a una estructura controlada y permite utilizarla en la administración de productos, precios y existencias de una tienda WooCommerce.
+Su función consiste en obtener información desde un ERP, transformarla a una estructura controlada y utilizarla en la administración de productos, precios y existencias de una tienda WooCommerce.
 
-DataConm incorpora validaciones, simulaciones y controles destinados a reducir errores antes de publicar información en la tienda.
-## Versión disponible
+El sistema incorpora validaciones, simulaciones, respaldos y controles destinados a reducir errores antes de publicar información en la tienda.
 
-Versión: 1.26.10
-Compilación: B0001
-Estado: primera versión oficial
-Plataforma: Windows
-Licencia: versión 1.x de prueba y uso gratuito
-
-La versión más reciente puede encontrarse en la sección Releases de este repositorio.
+Técnicamente, DataConm también funciona como middleware entre el ERP y WooCommerce, pero el término middleware no constituye la expansión oficial de su nombre.
 
 ## Compatibilidad inicial con ERP
 
-El conector ERP incluido en DataConm 1.x ha sido desarrollado y probado inicialmente con Perseo Web.
+La versión inicial de DataConm está configurada para trabajar con Perseo Web y WooCommerce sobre WordPress.
 
-Esta versión no garantiza compatibilidad directa con Perseo instalado localmente ni con otros sistemas ERP. Los diferentes sistemas pueden utilizar estructuras de bases de datos, nombres de campos, archivos, reportes, mecanismos de autenticación y métodos de extracción distintos.
+No debe asumirse que esta versión puede conectarse directamente con cualquier ERP, porque cada sistema puede utilizar estructuras, campos, reportes, credenciales y métodos de acceso diferentes.
 
-La selección del ERP determinará en futuras versiones el módulo encargado de interpretar, extraer y convertir la información al formato interno utilizado por DataConm.
+COMPULABT S.A. podrá estudiar la incorporación de otros ERP mediante colaboración con las empresas interesadas. El análisis puede requerir información como:
 
-## Funciones principales
+* País donde se utiliza el ERP.
+* Nombre y versión del sistema.
+* Dirección web, cuando corresponda.
+* Estructura de directorios del ERP.
+* Método de acceso a los datos.
+* Credenciales temporales y de alcance limitado, cuando sean necesarias.
+* Acceso autorizado al módulo de reportes de inventario o bodega.
+* Formato y nombre de los archivos exportados.
+* Archivo de ejemplo en formato CSV, TXT o XLSX.
+* Descripción de los campos y datos necesarios.
+* Sesiones de acceso remoto mediante AnyDesk cuando el ERP sea local y el análisis lo requiera.
 
-DataConm incluye actualmente:
+La información entregada para este análisis deberá limitarse a los datos técnicos indispensables. La incorporación de un nuevo ERP dependerá de la viabilidad técnica y de la colaboración proporcionada por la empresa solicitante.
 
-* Configuración inicial guiada.
-* Conexión protegida con el ERP.
-* Conexión protegida con WooCommerce.
-* Verificación de permisos de lectura y escritura.
-* Administración de categorías.
-* Procesamiento de productos nuevos.
-* Procesamiento de precios y existencias.
-* Centro de Datos.
-* Exportación de información.
-* Simulación previa a la publicación.
-* Publicación controlada en WooCommerce.
-* Gestión de imágenes predeterminadas.
-* Informes operativos.
-* Diagnóstico técnico.
-* Reporte asistido de problemas.
-* Instalación y desinstalación controladas.
-* Componente externo de actualización.
+Las solicitudes pueden enviarse a:
 
-## Flujo general de trabajo
+```text
+giosys@compulab.com.ec
+```
 
-El sistema aplica el siguiente orden operativo:
+## Instalación por primera vez
 
-1. Configuración del ERP.
-2. Configuración de WooCommerce.
-3. Descarga de la información del ERP.
-4. Descarga de la información de WooCommerce.
-5. Procesamiento de productos nuevos y existencias.
-6. Revisión en el Centro de Datos.
-7. Simulación de los cambios.
-8. Confirmación del responsable.
-9. Publicación en WooCommerce.
+La persona que instala DataConm por primera vez debe descargar:
 
-El ERP se considera la fuente principal de información. DataConm no debe utilizarse para publicar datos que no hayan sido revisados y simulados previamente.
+```text
+DataConmInstaller.zip
+```
 
-## Instalación
+desde la sección **Assets** de la publicación oficial más reciente.
 
-La instalación debe realizarse utilizando únicamente el paquete publicado en la sección Releases.
+Después deberá:
 
-Antes de ejecutar el instalador se recomienda:
+1. Extraer completamente el contenido del ZIP.
+2. Abrir la carpeta extraída.
+3. Ejecutar `DataConmInstaller.exe`.
+4. Seleccionar **Descargar e instalar**.
+5. Seguir el asistente de instalación de Windows.
 
-* Verificar que el archivo corresponda a la versión publicada.
-* Confirmar el checksum SHA-256.
-* Cerrar cualquier instalación anterior de DataConm.
-* Conservar un respaldo independiente de la información operativa.
-* Utilizar una cuenta de Windows con permisos para instalar programas.
+DataConmInstaller localizará automáticamente la instalación completa vigente, comprobará su integridad y abrirá el instalador oficial.
 
-El instalador se encarga de crear los directorios necesarios, registrar la aplicación y preparar las carpetas operativas.
+No será necesario instalar versiones anteriores ni aplicar una cadena de actualizaciones históricas.
 
-No debe copiarse manualmente el contenido interno del programa desde una instalación hacia otra.
+Después de completarse correctamente la instalación, DataConmInstaller puede eliminarse. Las versiones posteriores serán administradas por `DataConmUpdater.exe`, incluido dentro de DataConm.
+
+## Advertencia de Microsoft Defender SmartScreen
+
+Windows puede presentar una advertencia de Microsoft Defender SmartScreen porque esta versión gratuita inicial todavía no posee una firma digital comercial y el ejecutable puede tener poca reputación de descargas.
+
+Cuando `DataConmInstaller.zip` haya sido descargado exclusivamente desde el repositorio oficial de COMPULABT S.A., se puede continuar mediante:
+
+```text
+Más información → Ejecutar de todas formas
+```
+
+Esta advertencia no confirma que el archivo esté infectado. Indica que Windows todavía no reconoce un editor firmado o una reputación suficiente para el ejecutable.
+
+No se recomienda:
+
+* Desactivar Windows Defender.
+* Desactivar el antivirus.
+* Crear exclusiones permanentes.
+* Ejecutar archivos recibidos desde fuentes desconocidas.
+* Descargar DataConm desde repositorios o enlaces no oficiales.
+
+La protección del equipo debe permanecer activa y actualizada.
+
+## Verificación de integridad
+
+Cada paquete oficial se publica acompañado de un archivo `.sha256`.
+
+El valor SHA-256 permite comprobar que el archivo descargado corresponde exactamente al generado por COMPULABT S.A. y que no fue modificado durante su almacenamiento o transferencia.
+
+DataConmInstaller y DataConmUpdater realizan automáticamente las comprobaciones internas correspondientes antes de instalar cualquier paquete.
 
 ## Actualizaciones
 
-Las actualizaciones oficiales deberán ser proporcionadas por COMPULABT y procesadas desde:
+Los equipos que ya tengan DataConm instalado no deben utilizar nuevamente DataConmInstaller.
+
+Las versiones posteriores se administrarán desde:
 
 ```text
 Mantenimiento → Actualización del sistema
 ```
 
-El componente de actualización se encargará de:
+El actualizador comprobará internamente:
 
-* Identificar la versión instalada.
-* Validar el paquete.
-* Comprobar su integridad.
-* Crear respaldos.
-* Aplicar las migraciones necesarias.
-* Registrar cada etapa del proceso.
-* Restaurar la instalación anterior cuando se produzca un fallo recuperable.
-* Preparar un diagnóstico técnico cuando el proceso no pueda completarse.
+* Identidad del producto.
+* Versión instalada.
+* Versión de destino.
+* Integridad del paquete.
+* SHA-256.
+* Compatibilidad.
+* Estructura de datos y credenciales.
+* Migraciones requeridas.
+* Respaldo previo.
+* Resultado de la instalación.
+* Recuperación de la versión anterior cuando ocurra un error.
 
-Las credenciales, bases de datos, informes, registros y archivos operativos no deberán reemplazarse directamente. Cuando una actualización requiera modificar su estructura, el cambio deberá realizarse mediante una migración controlada, respaldada y verificable.
+Las actualizaciones no deben reemplazar directamente credenciales, bases de datos, informes, registros ni archivos operativos. Cuando una versión necesite modificar su estructura, el cambio deberá realizarse mediante una migración controlada y reversible.
 
-La comprobación automática de nuevas versiones mediante Internet será incorporada después de completar la configuración oficial del canal de distribución.
+## Versión gratuita 1.x
 
-## Integración de otros ERP
+La serie DataConm 1.x corresponde a una versión inicial gratuita destinada a evaluación, uso real y colaboración.
 
-DataConm ha sido diseñado para incorporar progresivamente nuevos ERP.
+Esta serie:
 
-Las empresas interesadas podrán solicitar el análisis de otro sistema proporcionando, según corresponda:
+* No establece un límite general de tiempo.
+* No establece un límite general de volumen de datos.
+* Puede recibir correcciones y mejoras dentro de la versión 1.x.
+* Puede incorporar funciones experimentales.
+* Puede presentar publicidad o información institucional en versiones futuras.
+* Se proporciona sin garantía de funcionamiento ininterrumpido.
+* Se utiliza bajo responsabilidad de la persona o empresa usuaria.
 
-* Nombre y versión del ERP.
-* País donde se utiliza.
-* Dirección web oficial.
-* Tipo de instalación: web, servidor o computadora local.
-* Método autorizado de acceso.
-* Estructura básica de directorios.
-* Nombre del archivo generado por el ERP.
-* Formato del reporte de inventario.
-* Archivo de ejemplo en CSV, TXT o XLSX.
-* Descripción de los campos principales.
-* Credenciales temporales y limitadas.
-* Acceso controlado al módulo de reportes.
-* Información técnica adicional necesaria para el estudio.
+Las ideas, observaciones y solicitudes recibidas durante esta etapa podrán utilizarse para mejorar DataConm y desarrollar las versiones comerciales previstas a partir de la versión 2.
 
-Cuando el ERP no sea de acceso web, el análisis autorizado podrá realizarse mediante una o varias sesiones remotas utilizando AnyDesk.
+## Licencia y restricciones
 
-Si la empresa solicitante no desea proporcionar acceso directo al ERP, podrá entregar un archivo de ejemplo generado por el sistema y explicar el procedimiento seguido para obtenerlo.
+El uso gratuito de la serie 1.x no significa que el código fuente sea abierto ni que el software pase al dominio público.
 
-La entrega de información no garantiza automáticamente la integración. COMPULABT S.A. evaluará la viabilidad técnica, la calidad de los datos y el alcance requerido.
-
-Cuando el resultado sea favorable, el ERP podrá incorporarse como una opción seleccionable en futuras versiones de DataConm.
-
-## Reporte de problemas y colaboración
-
-DataConm incorpora una opción de soporte y colaboración para:
-
-* Reportar errores.
-* Enviar sugerencias.
-* Solicitar mejoras.
-* Proponer nuevas funciones.
-* Solicitar la integración de otro ERP.
-* Preparar información técnica para diagnóstico.
-
-El sistema puede reunir registros técnicos relacionados con un problema y preparar un correo con la información necesaria. Antes del envío deberán revisarse los datos para evitar compartir credenciales, claves o información privada.
-
-Las solicitudes pueden enviarse a:
-
-[giosys@compulab.com.ec](mailto:giosys@compulab.com.ec)
-
-## Licencia de DataConm 1.x
-
-DataConm 1.x se distribuye como una versión inicial de prueba y uso gratuito.
-
-Esta versión funciona como un banco de pruebas abierto a observaciones, reportes de errores y propuestas de mejora. Las experiencias obtenidas podrán contribuir al desarrollo de las versiones comerciales previstas a partir de DataConm 2.
-
-No se establece inicialmente un límite general de procesamiento ni un vencimiento obligatorio para esta versión. Sin embargo, las condiciones particulares podrán variar según la compilación publicada.
-
-El uso de DataConm no autoriza:
+No se autoriza:
 
 * Aplicar ingeniería inversa.
-* Descompilar el programa.
-* Extraer o reconstruir su código.
-* Modificar componentes internos sin autorización.
-* Eliminar identificaciones de propiedad.
-* Redistribuir versiones alteradas.
-* Presentar el software como producto propio.
-* Utilizar marcas o elementos gráficos de COMPULABT S.A. sin autorización.
+* Descompilar o desensamblar el software.
+* Extraer o reutilizar componentes internos.
+* Modificar ejecutables sin autorización.
+* Eliminar identificaciones institucionales.
+* Redistribuir versiones modificadas.
+* Presentar DataConm como un desarrollo propio o de otra empresa.
 
-Las solicitudes de corrección, modificación, integración o mejora serán recibidas por los canales oficiales y evaluadas por COMPULABT S.A.
+Se aceptan solicitudes de modificación destinadas a corregir errores, incorporar otros ERP, aumentar funciones, mejorar el desempeño o adaptar procesos empresariales.
 
-## Responsabilidad
+Las modificaciones deberán solicitarse a COMPULABT S.A. para su análisis técnico.
 
-DataConm se proporciona sin garantía de funcionamiento ininterrumpido.
+## Soporte y colaboración
 
-La persona o empresa usuaria es responsable de:
+Las consultas, reportes de errores, solicitudes de modificación y propuestas de nuevos ERP pueden enviarse a:
 
-* Revisar la configuración.
-* Validar las credenciales.
-* Confirmar los datos procesados.
-* Ejecutar las simulaciones.
-* Revisar los cambios antes de publicarlos.
-* Mantener respaldos independientes.
-* Proteger el acceso al sistema.
-* Verificar las actualizaciones antes de aplicarlas.
+```text
+giosys@compulab.com.ec
+```
 
-COMPULABT S.A. no será responsable por pérdidas de información, interrupciones operativas, publicaciones incorrectas, configuraciones inadecuadas, accesos no autorizados o decisiones tomadas sin revisar los resultados presentados por el sistema.
+Cuando ocurra un error, DataConm puede preparar un archivo ZIP de diagnóstico con la información técnica necesaria para su revisión.
 
-## Aclaración sobre productos de terceros
-
-Perseo, WooCommerce, WordPress, Windows, AnyDesk y las demás marcas mencionadas pertenecen a sus respectivos propietarios.
-
-DataConm y COMPULABT S.A. no representan, sustituyen ni forman parte de las empresas propietarias de estos productos.
-
-Las referencias se incluyen únicamente para identificar compatibilidad técnica, métodos de integración o herramientas que pueden intervenir durante la configuración y soporte.
-
-## Seguridad
-
-Los paquetes oficiales deben descargarse únicamente desde este repositorio o desde un canal autorizado por COMPULABT S.A.
-
-No deben compartirse públicamente:
-
-* Credenciales del ERP.
-* Credenciales de WooCommerce.
-* Claves empresariales.
-* Contraseñas de paquetes.
-* Bases de datos operativas.
-* Informes internos.
-* Registros que contengan información privada.
-* Respaldos de instalaciones.
-* Archivos técnicos de clientes.
-
-La comprobación mediante SHA-256 permite verificar la integridad del archivo, pero no sustituye una firma digital. Las futuras versiones podrán incorporar mecanismos adicionales de firma y verificación de procedencia.
+El diagnóstico no debe incluir contraseñas, claves secretas ni credenciales legibles.
 
 ## Empresa desarrolladora
 
+```text
 COMPULABT S.A.
 RUC: 1792709202001
-Quito, Ecuador
-WhatsApp: +593 99 807 2050
-Correo: [giosys@compulab.com.ec](mailto:giosys@compulab.com.ec)
+Quito - Ecuador
 Sitio web: https://compulab.com.ec/
+Correo: giosys@compulab.com.ec
+WhatsApp: +593 99 807 2050
+```
 
-Logo y marcas utilizados con autorización de COMPULABT S.A.
+## Fuente oficial
+
+Los paquetes deben descargarse exclusivamente desde:
+
+```text
+https://github.com/compulabt/dataconm-distribucion
+```
+
+Los archivos automáticos de código fuente que GitHub presenta como `Source code (zip)` y `Source code (tar.gz)` no contienen el código privado de DataConm. Son archivos generados automáticamente por GitHub a partir del contenido público del repositorio.
