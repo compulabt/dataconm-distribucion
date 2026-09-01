@@ -1,0 +1,16 @@
+{
+  "format": "DataConm Stable Release 1.0",
+  "product_id": "compulab-system",
+  "product_name": "DataConm",
+  "version": "1.26.10",
+  "build": "B0001",
+  "channel": "estable",
+  "architecture": "x64",
+  "supported_windows": "Windows 10 y Windows 11 de 64 bits",
+  "package_url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.10-B0001/DataConm_Setup_V1.26.10_B0001.zip",
+  "package_name": "DataConm_Setup_V1.26.10_B0001.zip",
+  "package_sha256": "6d56078d2a293e209afa8376cac6da7e6101d7893a5cc5659fb24b894c92c401",
+  "package_size": 294836882,
+  "package_key_id": "90db47fe4fb00453",
+  "published_at": "2026-08-31T20:24:48-04:00"
+}
