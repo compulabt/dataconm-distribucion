@@ -1,5 +1,5 @@
 {
-  "format": "DataConm Stable Release 1.0",
+  "format": "DataConm Stable Release 2.0",
   "product_id": "compulab-system",
   "product_name": "DataConm",
   "version": "1.26.10",
@@ -7,10 +7,46 @@
   "channel": "estable",
   "architecture": "x64",
   "supported_windows": "Windows 10 y Windows 11 de 64 bits",
+  "support_email": "giosys@compulab.com.ec",
+  "website": "https://compulab.com.ec",
   "package_url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.10-B0001/DataConm_Setup_V1.26.10_B0001.zip",
   "package_name": "DataConm_Setup_V1.26.10_B0001.zip",
-  "package_sha256": "6d56078d2a293e209afa8376cac6da7e6101d7893a5cc5659fb24b894c92c401",
-  "package_size": 294836882,
+  "package_sha256": "1f8bd62cd4811b756023af42802bda54460c7c4e7af313a49cffce6ecc6e4723",
+  "package_size": 297800700,
   "package_key_id": "90db47fe4fb00453",
-  "published_at": "2026-08-31T20:24:48-04:00"
+  "published_at": "2026-09-15T22:26:00-04:00",
+  "installer": {
+    "version": "1.1.1",
+    "minimum_version": "1.1.1"
+  },
+  "updater": {
+    "version": "1.3.1",
+    "url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.11-B0002/DataConmUpdater.zip",
+    "sha256": "0cb96d778171fe42e08419a245905b26dc7be6a2a6c3c3e3150aeec35e1f1104",
+    "size": 14792359,
+    "files": [
+      "AYUDA_ACTUALIZADOR.html",
+      "DataConmUpdater.exe",
+      "INSTRUCCIONES.txt",
+      "updater_manifest.json"
+    ]
+  },
+  "full_bases": [
+    {
+      "version": "1.26.10",
+      "build": "B0001",
+      "package_url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.10-B0001/DataConm_Setup_V1.26.10_B0001.zip",
+      "package_sha256": "1f8bd62cd4811b756023af42802bda54460c7c4e7af313a49cffce6ecc6e4723",
+      "package_size": 297800700
+    }
+  ],
+  "updates": [
+    {
+      "version": "1.26.11",
+      "build": "B0002",
+      "package_url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.11-B0002/DataConm_Upgrade_V1.26.11_B0002.zip",
+      "package_sha256": "1d2656bfcd1ec2db8a3a1bbe665b1771f8664deb5d95451d4ceb5745dbff51dd",
+      "package_size": 429946418
+    }
+  ]
 }
