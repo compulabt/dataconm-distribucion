@@ -40,13 +40,5 @@
       "package_size": 297800700
     }
   ],
-  "updates": [
-    {
-      "version": "1.26.11",
-      "build": "B0002",
-      "package_url": "https://github.com/compulabt/dataconm-distribucion/releases/download/v1.26.11-B0002/DataConm_Upgrade_V1.26.11_B0002.zip",
-      "package_sha256": "e51e8b738b94ef69ea50b8310dd9a5420eef55f696ae9e4a10d21d32fd52b9e1",
-      "package_size": 415153217
-    }
-  ]
+  "updates": []
 }
