@@ -1,5 +1,20 @@
 # DataConm
 
+<!-- DataConm instalación única independiente -->
+## Instalar DataConm
+
+**Para una instalación nueva, el único archivo que debe descargar el usuario es [DataConmInstaller_1.1.8.zip](https://github.com/compulabt/dataconm-distribucion/releases/download/dataconm-installer/DataConmInstaller_1.1.8.zip).**
+
+Extraiga el ZIP y ejecute `DataConmInstaller.exe`. El programa descarga y verifica los componentes necesarios desde el canal oficial. Se necesita conexión a Internet.
+
+[Publicación independiente del Installer](https://github.com/compulabt/dataconm-distribucion/releases/tag/dataconm-installer). Su archivo `.sha256` es una comprobación adicional opcional para el usuario.
+
+Actualmente instala directamente **v1.26.12 · B0003**. No necesita descargar previamente B0001, B0002, Setup ni Updater para comenzar una instalación nueva.
+
+Los paquetes Setup, Upgrade y Updater de cada versión se conservan para distribución técnica, actualización y recuperación. El Installer es una herramienta independiente, con versión propia.
+
+<!-- Fin DataConm instalación única independiente -->
+
 ## Distribución oficial
 
 Este repositorio contiene exclusivamente los paquetes oficiales de instalación y actualización de DataConm.
@@ -44,35 +59,12 @@ Las solicitudes pueden enviarse a:
 giosys@compulab.com.ec
 ```
 
-## Instalación por primera vez
-
-La persona que instala DataConm por primera vez debe descargar:
-
-```text
-DataConmInstaller.zip
-```
-
-desde la sección **Assets** de la publicación oficial más reciente.
-
-Después deberá:
-
-1. Extraer completamente el contenido del ZIP.
-2. Abrir la carpeta extraída.
-3. Ejecutar `DataConmInstaller.exe`.
-4. Seleccionar **Descargar e instalar**.
-5. Seguir el asistente de instalación de Windows.
-
-DataConmInstaller localizará automáticamente la instalación completa vigente, comprobará su integridad y abrirá el instalador oficial.
-
-No será necesario instalar versiones anteriores ni aplicar una cadena de actualizaciones históricas.
-
-Después de completarse correctamente la instalación, DataConmInstaller puede eliminarse. Las versiones posteriores serán administradas por `DataConmUpdater.exe`, incluido dentro de DataConm.
 
 ## Advertencia de Microsoft Defender SmartScreen
 
 Windows puede presentar una advertencia de Microsoft Defender SmartScreen porque esta versión gratuita inicial todavía no posee una firma digital comercial y el ejecutable puede tener poca reputación de descargas.
 
-Cuando `DataConmInstaller.zip` haya sido descargado exclusivamente desde el repositorio oficial de COMPULABT S.A., se puede continuar mediante:
+Cuando `DataConmInstaller_1.1.8.zip` haya sido descargado exclusivamente desde el repositorio oficial de COMPULABT S.A., se puede continuar mediante:
 
 ```text
 Más información → Ejecutar de todas formas
@@ -100,7 +92,7 @@ DataConmInstaller y DataConmUpdater realizan automáticamente las comprobaciones
 
 ## Actualizaciones
 
-Los equipos que ya tengan DataConm instalado no deben utilizar nuevamente DataConmInstaller.
+Para las actualizaciones habituales de equipos con DataConm instalado, utilice la actualización del sistema. Las funciones de reparación y recuperación permanecen disponibles mediante las herramientas residentes correspondientes.
 
 Las versiones posteriores se administrarán desde:
 
